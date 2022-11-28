@@ -54,15 +54,7 @@
             	<size>0.03 0.04</size>
 			<opacity>0.4</opacity>
 		</image>
-		<text name="wstlogo">
-			<text>eestuarty</text>
-			<fontPath>${mainFont}</fontPath>
-            	<fontSize>0.035</fontSize>
-            	<pos>0.064 0.95</pos>
-            	<size>0.2 0.01</size>
-			<color>${secondaryColor}</color>
-			<opacity>0.8</opacity>
-		</text>
+		
      		<helpsystem name="help">
             	<origin>1 0</origin>
             	<textColor>${secondaryColor}</textColor>
