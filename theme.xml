@@ -1,0 +1,167 @@
+<!--
+   
+-->
+
+<theme>
+	<include>./navigationsounds.xml</include>
+    	<include>./colors.xml</include>
+
+    	<variables>
+        	<mainFont>./assets/fonts/ebd.ttf</mainFont>
+    	</variables>
+
+    	<aspectRatio name="16:9">
+        	<include>./aspect-ratio-16-9.xml</include>
+    	</aspectRatio>
+    	<aspectRatio name="16:10">
+        	<include>./aspect-ratio-16-10.xml</include>
+    	</aspectRatio>
+    	<aspectRatio name="4:3">
+        	<include>./aspect-ratio-4-3.xml</include>
+    	</aspectRatio>
+    	<aspectRatio name="21:9">
+        	<include>./aspect-ratio-21-9.xml</include>
+    	</aspectRatio>
+
+    	<view name="system, gamelist">
+      	<image name="background">
+            	<pos>0 0</pos>
+            	<size>1 1</size>
+            	<origin>0 0</origin>
+            	<path>./assets/box.png</path>
+            	<tile>false</tile>
+            	<color>${backgroundColor}</color>
+            	<zIndex>0</zIndex>
+      	</image>
+		<image name="controller">
+			<pos>0.45 0</pos>
+			<origin>0 0</origin>
+			<maxSize>0.55 0.7</maxSize>
+			<path>./controllers/${system.theme}.png</path>
+			<tile>false</tile>
+			
+		</image>
+      	<image name="bottomline">
+            	<size>1 0.001</size>
+            	<origin>0.5 0.5</origin>
+            	<path>./assets/box.png</path>
+            	<tile>false</tile>
+            	<color>${secondaryColor}</color>
+      	</image>
+		<image name="wstlogo">
+			<path>./wsty.png</path>
+            	<pos>0.034 0.93</pos>
+            	<size>0.03 0.04</size>
+			<opacity>0.4</opacity>
+		</image>
+		<text name="wstlogo">
+			<text>eestuarty</text>
+			<fontPath>${mainFont}</fontPath>
+            	<fontSize>0.035</fontSize>
+            	<pos>0.064 0.95</pos>
+            	<size>0.2 0.01</size>
+			<color>${secondaryColor}</color>
+			<opacity>0.8</opacity>
+		</text>
+     		<helpsystem name="help">
+            	<origin>1 0</origin>
+            	<textColor>${secondaryColor}</textColor>
+            	<textColorDimmed>${secondaryColor}</textColorDimmed>
+            	<iconColor>${secondaryColor}</iconColor>
+            	<iconColorDimmed>${secondaryColor}</iconColorDimmed>
+            	<fontPath>${mainFont}</fontPath>
+            	<letterCase>capitalize</letterCase>
+      	</helpsystem>
+    	</view>
+
+    	<view name="system">
+		<image name="topline">
+            	<size>1 0.001</size>
+			<pos>0.5 0.7</pos>
+            	<origin>0.5 0.5</origin>
+            	<path>./assets/box.png</path>
+            	<tile>false</tile>
+            	<color>${secondaryColor}</color>
+        	</image>
+        	<carousel name="system_carousel">
+            	<pos>0 0.6</pos>
+            	<size>1 0.4</size>
+            	<type>horizontal</type>
+            	<staticItem>./art/${colorSchemeName}/${system.theme}.svg</staticItem>
+            	<itemScale>1</itemScale>
+            	<itemVerticalAlignment>center</itemVerticalAlignment>
+            	<unfocusedItemOpacity>0.3</unfocusedItemOpacity>
+            	<color>00000000</color>
+            	<textBackgroundColor>${placeholderColor}</textBackgroundColor>
+            	<!-- Placeholder text -->
+            	<text>${system.fullName}</text>
+            	<textColor>${secondaryColor}</textColor>
+            	<fontPath>${mainFont}</fontPath>
+            	<fontSize>0.035</fontSize>
+            	<letterCase>none</letterCase>
+            	<letterCaseCollections>capitalize</letterCaseCollections>
+            	<lineSpacing>1.5</lineSpacing>
+            	<zIndex>50</zIndex>
+        	</carousel>
+    	</view>
+
+    	<view name="gamelist">    
+      	<textlist name="gamelist">
+            	<pos>0.04 0.2</pos>
+            	<size>0.38 0.68</size>
+            	<origin>0 0</origin>
+            	<selectorHeight>0.05</selectorHeight>
+            	<selectorOffsetY>-0.0015</selectorOffsetY>
+            	<selectorColor>${secondaryColor}</selectorColor>
+            	<selectorImagePath>./assets/selector.png</selectorImagePath>
+            	<selectedColor>${mainColor}</selectedColor>
+            	<primaryColor>${secondaryColor}</primaryColor>
+            	<secondaryColor>${tertiaryColor}</secondaryColor>
+            	<fontPath>${mainFont}</fontPath>
+            	<fontSize>0.030</fontSize>
+            	<horizontalAlignment>left</horizontalAlignment>
+            	<horizontalMargin>0.01</horizontalMargin>
+            	<letterCase>none</letterCase>
+            	<letterCaseGroupedCollections>capitalize</letterCaseGroupedCollections>
+            	<lineSpacing>1.9</lineSpacing>
+      	</textlist>
+      	<image name="Syslogo">
+			<path>./art/${colorSchemeName}/${system.theme}.svg</path>
+            	<pos>0.05 0.065</pos>
+            	<maxSize>0.35 0.11</maxSize>
+		</image>
+		<image name="md_marquee">
+			<pos>0.85 0.765</pos>
+			<maxSize>0.268 0.228</maxSize>
+			<origin>0.5 0.5</origin>
+			<imageType>marquee</imageType>
+		</image>       
+  	</view>
+
+	<variant name="withVideos">
+      	<view name="gamelist">
+     			<video name="md_video">         
+				<pos>0.55 0.71</pos>
+            		<maxSize>0.277 0.39</maxSize>
+            		<origin>0.5 0.5</origin>
+            		<imageType>image</imageType>
+            		<interpolation>nearest</interpolation>
+            		<pillarboxes>false</pillarboxes>
+            		<pillarboxThreshold>0.85 0.90</pillarboxThreshold>
+           	 		<delay>4.5</delay>
+            		<scrollFadeIn>true</scrollFadeIn>
+            	</video>
+     		</view>
+    	</variant>
+
+    	<variant name="withoutVideos">
+      	<view name="gamelist">
+            	<image name="md_image">
+            		<pos>0.55 0.71</pos>
+            		<maxSize>0.277 0.39</maxSize>
+            		<origin>0.5 0.5</origin>
+            		<imageType>image</imageType>
+            	</image>
+    		</view>
+    	</variant>
+</theme>

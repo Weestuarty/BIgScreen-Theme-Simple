@@ -1,0 +1,43 @@
+<theme>
+    <colorScheme name="black">
+        <variables>
+            <colorSchemeName>black</colorSchemeName>
+            <backgroundColor>111111</backgroundColor>
+            <backgroundColor2>222222</backgroundColor2>
+            <mainColor>f1c40f</mainColor>
+            <highlightColor>82f0ff</highlightColor>
+            <secondaryColor>7D6608</secondaryColor>
+            <tertiaryColor>ffffff</tertiaryColor>
+            <systemColor>3aa5ab</systemColor>
+            <placeholderColor>505050</placeholderColor>
+        </variables>
+    </colorScheme>
+<colorScheme name="gold">
+        <variables>
+            <colorSchemeName>gold</colorSchemeName>
+            <backgroundColor>7d6608</backgroundColor>
+            <backgroundColor2>c0c0c0</backgroundColor2>
+            <mainColor>a6acaf</mainColor>
+            <highlightColor>ffffff</highlightColor>
+            <secondaryColor>222222</secondaryColor>
+            <tertiaryColor>333333</tertiaryColor>
+            <systemColor>3aa5ab</systemColor>
+            <placeholderColor>ffffff</placeholderColor>
+        </variables>
+    </colorScheme>
+    <colorScheme name="grey">
+        <variables>
+            <colorSchemeName>grey</colorSchemeName>
+            <backgroundColor>a6acaf</backgroundColor>
+            <backgroundColor2>c0c0c0</backgroundColor2>
+            <mainColor>7D6608</mainColor>
+            <highlightColor>ffffff</highlightColor>
+            <secondaryColor>222222</secondaryColor>
+            <tertiaryColor>7D6608</tertiaryColor>
+            <systemColor>3aa5ab</systemColor>
+            <placeholderColor>ffffff</placeholderColor>
+        </variables>
+    </colorScheme>
+	
+
+</theme>
