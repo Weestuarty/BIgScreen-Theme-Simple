@@ -24,6 +24,6 @@ The following options are included:
 
 # Credits
 
-The theme is has images from Dan Patricks Svg Logo set on launchbox forums
-Support for creating theme from LeonSe on the official emulationstation discord
+The theme is has images from Dan Patricks Svg Logo set on launchbox forums. 
+Support for creating theme from LeonSe on the official emulationstation discord. 
 Inspiration and learning from Modernd-De and Slate-DE ESDE themes
