@@ -1,6 +1,6 @@
 # BigScreen -Simple for EmulationStation Desktop Edition
 
-BigScreen -Simple theme set for ES-DE that supports most systems (wip).
+BigScreen -Simple theme set for ES-DE that supports most systems (wip). Addition images required for controllers for several sytems. images should be placed in the controllers folder and named systemname.png . Controller image submissions accepted to update the theme for others.
 
 The following options are included:
 
