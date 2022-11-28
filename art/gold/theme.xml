@@ -1,0 +1,321 @@
+<!--
+    Modern for EmulationStation Desktop Edition (modern-DE)
+    Author: Sophia Hadash
+    Email: s.hadash2@protonmail.com
+    License: Creative Commons CC-BY-NC-SA
+    Based on: Nintendo Switch Theme by Lilbud
+-->
+
+<theme>
+    <include>./navigationsounds.xml</include>
+    <include>./colors.xml</include>
+
+    <variables>
+        <mainFont>./assets/fonts/nswitchui.ttf</mainFont>
+    </variables>
+
+    <aspectRatio name="16:9">
+        <include>./aspect-ratio-16-9.xml</include>
+    </aspectRatio>
+    <aspectRatio name="16:10">
+        <include>./aspect-ratio-16-10.xml</include>
+    </aspectRatio>
+    <aspectRatio name="4:3">
+        <include>./aspect-ratio-4-3.xml</include>
+    </aspectRatio>
+    <aspectRatio name="21:9">
+        <include>./aspect-ratio-21-9.xml</include>
+    </aspectRatio>
+
+    <view name="system, gamelist">
+        <image name="background">
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <origin>0 0</origin>
+            <path>./assets/box.png</path>
+            <tile>true</tile>
+            <color>${backgroundColor}</color>
+            <zIndex>0</zIndex>
+        </image>
+        <image name="bottomline">
+            <size>0.938 0.001</size>
+            <origin>0.5 0.5</origin>
+            <path>./assets/box.png</path>
+            <tile>false</tile>
+            <color>${tertiaryColor}</color>
+        </image>
+        <helpsystem name="help">
+            <origin>1 0</origin>
+            <textColor>${secondaryColor}</textColor>
+            <textColorDimmed>${secondaryColor}</textColorDimmed>
+            <iconColor>${secondaryColor}</iconColor>
+            <iconColorDimmed>${secondaryColor}</iconColorDimmed>
+            <fontPath>${mainFont}</fontPath>
+            <letterCase>capitalize</letterCase>
+        </helpsystem>
+    </view>
+
+    <view name="system">
+        <carousel name="system_carousel">
+            <pos>0 0.3</pos>
+            <size>1 0.4</size>
+            <type>horizontal</type>
+            <staticItem>./art/${system.theme}.svg</staticItem>
+            <itemScale>1</itemScale>
+            <itemVerticalAlignment>center</itemVerticalAlignment>
+            <unfocusedItemOpacity>0.3</unfocusedItemOpacity>
+            <color>00000000</color>
+            <textBackgroundColor>${placeholderColor}</textBackgroundColor>
+            <!-- Placeholder text -->
+            <text>${system.fullName}</text>
+            <textColor>${secondaryColor}</textColor>
+            <fontPath>${mainFont}</fontPath>
+            <fontSize>0.035</fontSize>
+            <letterCase>none</letterCase>
+            <letterCaseCollections>capitalize</letterCaseCollections>
+            <lineSpacing>1.5</lineSpacing>
+            <zIndex>50</zIndex>
+        </carousel>
+        
+        <!-- System title top left -->
+       
+        
+    </view>
+    <view name="gamelist">    
+        <textlist name="gamelist">
+            <pos>0.04 0.182</pos>
+            <size>0.31 0.68</size>
+            <origin>0 0</origin>
+            <selectorHeight>0.05</selectorHeight>
+            <selectorOffsetY>-0.0015</selectorOffsetY>
+            <selectorColor>${mainColor}</selectorColor>
+            <selectorImagePath>./assets/selector.png</selectorImagePath>
+            <selectedColor>${mainColor}</selectedColor>
+            <primaryColor>${secondaryColor}</primaryColor>
+            <secondaryColor>${tertiaryColor}</secondaryColor>
+            <fontPath>${mainFont}</fontPath>
+            <fontSize>0.030</fontSize>
+            <horizontalAlignment>left</horizontalAlignment>
+            <horizontalMargin>0.01</horizontalMargin>
+            <letterCase>none</letterCase>
+            <letterCaseGroupedCollections>capitalize</letterCaseGroupedCollections>
+            <lineSpacing>1.9</lineSpacing>
+        </textlist>
+
+        <image name="topline">
+            <pos>0.5 0.13</pos>
+            <size>0.938 0.001</size>
+            <origin>0.5 0.5</origin>
+            <path>./assets/box.png</path>
+            <tile>false</tile>
+            <color>${tertiaryColor}</color>
+        </image>
+        <text name="system_name, collection_name">
+            <pos>0.034 0.065</pos>
+            <size>0.743 0.031</size>
+            <fontPath>${mainFont}</fontPath>
+            <fontSize>0.03</fontSize>
+            <horizontalAlignment>left</horizontalAlignment>
+            <color>${secondaryColor}</color>
+            <letterCase>capitalize</letterCase>
+        </text>
+        <text name="system_name">
+            <text>${system.fullName.noCollections}</text>
+            <letterCase>none</letterCase>
+        </text>
+        <text name="collection_name">
+            <text>${system.fullName.collections}</text>
+            <letterCase>capitalize</letterCase>
+        </text>
+        <gamelistinfo name="gamelistinfo">
+            <pos>0.966 0.065</pos>
+            <size>0.2 0.031</size>
+            <origin>1 0</origin>
+            <fontPath>${mainFont}</fontPath>
+            <fontSize>0.03</fontSize>
+            <horizontalAlignment>right</horizontalAlignment>
+            <color>${secondaryColor}</color>
+        </gamelistinfo>
+        <image name="md_marquee">
+            <pos>0.494 0.68</pos>
+            <maxSize>0.268 0.228</maxSize>
+            <origin>0.5 0.5</origin>
+            <imageType>marquee</imageType>
+        </image>
+        <!-- Metadata panel (right) -->
+        <image name="md_background">
+            <pos>0.675 0.20</pos>
+            <size>0.325 0.63</size>
+            <origin>0 0</origin>
+            <path>./assets/box.png</path>
+            <tile>false</tile>
+            <color>${backgroundColor2}</color>
+        </image>
+        
+        <text name="md_description">
+            <pos>0.70 0.1745</pos>
+            <size>0.269 0.3105</size>
+            <metadata>description</metadata>
+            <container>true</container>
+            <containerScrollSpeed>1</containerScrollSpeed>
+            <containerStartDelay>4.5</containerStartDelay>
+            <containerResetDelay>7</containerResetDelay>
+            <fontSize>0.03</fontSize>
+            <lineSpacing>1.2</lineSpacing>
+        </text>
+        <text name="md_lbl_publisher">
+            <pos>0.70 0.532</pos>
+            <size>0.13125 0.02</size>
+            <text>Publisher:</text>
+            <metadataElement>true</metadataElement>
+            <fontSize>0.02</fontSize>
+        </text>
+        <text name="md_publisher">
+            <pos>0.70 0.552</pos>
+            <size>0.13125 0.03</size>
+            <metadata>publisher</metadata>
+            <fontSize>0.03</fontSize>
+        </text>
+        <text name="md_lbl_developer">
+            <pos>0.8453 0.532</pos>
+            <size>0.13125 0.02</size>
+            <text>Developer:</text>
+            <metadataElement>true</metadataElement>
+            <fontSize>0.02</fontSize>
+        </text>
+        <text name="md_developer">
+            <pos>0.8453 0.552</pos>
+            <size>0.13125 0.03</size>
+            <metadata>developer</metadata>
+            <fontSize>0.03</fontSize>
+        </text>
+        <text name="md_lbl_releasedate">
+            <pos>0.70 0.608</pos>
+            <size>0.13125 0.02</size>
+            <text>Released:</text>
+            <metadataElement>true</metadataElement>
+            <fontSize>0.02</fontSize>
+        </text>
+        <datetime name="md_releasedate">
+            <pos>0.70 0.628</pos>
+            <size>0.13125 0.03</size>
+            <metadata>releasedate</metadata>
+            <fontSize>0.03</fontSize>
+        </datetime>
+        <text name="md_lbl_players">
+            <pos>0.8453 0.608</pos>
+            <size>0.13125 0.02</size>
+            <text>Players:</text>
+            <metadataElement>true</metadataElement>
+            <fontSize>0.02</fontSize>
+        </text>
+        <text name="md_players">
+            <pos>0.8453 0.628</pos>
+            <size>0.13125 0.03</size>
+            <metadata>players</metadata>
+            <fontSize>0.03</fontSize>
+        </text>
+        <text name="md_lbl_genre">
+            <pos>0.70 0.684</pos>
+            <size>0.13125 0.02</size>
+            <text>Genre:</text>
+            <metadataElement>true</metadataElement>
+            <fontSize>0.02</fontSize>
+        </text>
+        <text name="md_genre">
+            <pos>0.70 0.704</pos>
+            <size>0.13125 0.03</size>
+            <metadata>genre</metadata>
+            <fontSize>0.03</fontSize>
+        </text>
+        <text name="md_lbl_rating">
+            <pos>0.70 0.760</pos>
+            <size>0.13125 0.02</size>
+            <text>Rating:</text>
+            <metadataElement>true</metadataElement>
+            <fontSize>0.02</fontSize>
+        </text>
+        <text name="md_lbl_releasedate, md_lbl_developer, md_lbl_publisher, md_lbl_genre,
+                    md_lbl_players, md_lbl_lastplayed, md_lbl_playcount, md_lbl_rating">
+            <color>${tertiaryColor}</color>
+        </text>
+        <text name="md_developer, md_publisher, md_genre, md_players, md_playcount, md_description">
+            <color>${secondaryColor}</color>
+        </text>
+        <datetime name="md_releasedate">
+            <color>${secondaryColor}</color>
+        </datetime>
+        <rating name="md_rating">
+            <pos>0.70 0.785</pos>
+            <size>0.04 0.03</size>
+            <filledPath>./assets/star-filled.svg</filledPath>
+            <unfilledPath>./assets/${colorSchemeName}/star-unfilled.svg</unfilledPath>
+        </rating>
+        <badges name="md_badges">
+            <pos>0.8423 0.69</pos>
+            <size>0.1267 0.17335978655</size>
+            <origin>0 0</origin>
+            <direction>column</direction>
+            <slots>collection, folder, favorite, completed, kidgame, broken, controller, altemulator</slots>
+            <controllerPos>0.165 0.5</controllerPos>
+            <controllerSize>0.2</controllerSize>
+            <customBadgeIcon badge="collection">./assets/${colorSchemeName}/badges/collection.svg</customBadgeIcon>
+            <customBadgeIcon badge="folder">./assets/${colorSchemeName}/badges/folder.svg</customBadgeIcon>
+            <customBadgeIcon badge="favorite">./assets/${colorSchemeName}/badges/favorite.svg</customBadgeIcon>
+            <customBadgeIcon badge="completed">./assets/${colorSchemeName}/badges/completed.svg</customBadgeIcon>
+            <customBadgeIcon badge="kidgame">./assets/${colorSchemeName}/badges/kidgame.svg</customBadgeIcon>
+            <customBadgeIcon badge="broken">./assets/${colorSchemeName}/badges/broken.svg</customBadgeIcon>
+            <customBadgeIcon badge="controller">./assets/${colorSchemeName}/badges/controller.svg</customBadgeIcon>
+            <customBadgeIcon badge="altemulator">./assets/${colorSchemeName}/badges/altemulator.svg</customBadgeIcon>
+            <customControllerIcon controller="gamepad_generic">./assets/controllers/generic.svg</customControllerIcon>
+            <customControllerIcon controller="gamepad_xbox">./assets/controllers/xbox.svg</customControllerIcon>
+            <customControllerIcon controller="gamepad_playstation">./assets/controllers/dualshock4.svg</customControllerIcon>
+            <customControllerIcon controller="gamepad_nintendo_nes">./assets/controllers/classic.svg</customControllerIcon>
+            <customControllerIcon controller="gamepad_nintendo_snes">./assets/controllers/classic.svg</customControllerIcon>
+            <customControllerIcon controller="gamepad_nintendo_64">./assets/controllers/n64.svg</customControllerIcon>
+            <customControllerIcon controller="joystick_generic">./assets/controllers/joystick.svg</customControllerIcon>
+            <customControllerIcon controller="trackball_generic">./assets/controllers/trackball.svg</customControllerIcon>
+            <customControllerIcon controller="lightgun_generic">./assets/controllers/gun.svg</customControllerIcon>
+            <customControllerIcon controller="lightgun_nintendo">./assets/controllers/gun.svg</customControllerIcon>
+            <customControllerIcon controller="keyboard_generic">./assets/controllers/keyboard.svg</customControllerIcon>
+            <customControllerIcon controller="mouse_generic">./assets/controllers/mouse.svg</customControllerIcon>
+            <customControllerIcon controller="mouse_amiga">./assets/controllers/mouse.svg</customControllerIcon>
+            <customControllerIcon controller="keyboard_mouse_generic">./assets/controllers/keyboard-mouse.svg</customControllerIcon>
+            <customControllerIcon controller="steering_wheel_generic">./assets/controllers/wheel.svg</customControllerIcon>
+            <customControllerIcon controller="wii_remote_nintendo">./assets/controllers/wiimote.svg</customControllerIcon>
+            <customControllerIcon controller="wii_remote_and_nunchuk_nintendo">./assets/controllers/wiimote-nunchuck.svg</customControllerIcon>
+            <customControllerIcon controller="joycon_left_or_right_nintendo">./assets/controllers/joycon-left.svg</customControllerIcon>
+            <customControllerIcon controller="joycon_pair_nintendo">./assets/controllers/joycon-pair.svg</customControllerIcon>
+            <customControllerIcon controller="unknown">./assets/controllers/generic.svg</customControllerIcon>
+            <folderLinkPos>0.18 0.55</folderLinkPos>
+            <folderLinkSize>0.14</folderLinkSize>
+        </badges>
+    </view>
+
+    <variant name="withVideos">
+        <view name="gamelist">
+            <video name="md_video">
+                <pos>0.4985 0.365</pos>
+                <maxSize>0.277 0.39</maxSize>
+                <origin>0.5 0.5</origin>
+                <imageType>image</imageType>
+                <interpolation>nearest</interpolation>
+                <pillarboxes>false</pillarboxes>
+                <pillarboxThreshold>0.85 0.90</pillarboxThreshold>
+                <delay>1.5</delay>
+                <scrollFadeIn>true</scrollFadeIn>
+            </video>
+        </view>
+    </variant>
+
+    <variant name="withoutVideos">
+        <view name="gamelist">
+            <image name="md_image">
+                <pos>0.4985 0.365</pos>
+                <maxSize>0.277 0.39</maxSize>
+                <origin>0.5 0.5</origin>
+                <imageType>image</imageType>
+            </image>
+        </view>
+    </variant>
+</theme>
